@@ -6,8 +6,8 @@
 //
 
 import Fluent
-import Vapor
 import SwiftBSON
+import Vapor
 
 public final class User: Model, Content {
     public static let schema = "users"
