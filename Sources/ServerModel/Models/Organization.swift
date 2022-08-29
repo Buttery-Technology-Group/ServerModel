@@ -6,6 +6,7 @@
 //
 
 import Fluent
+import SwiftBSON
 import Vapor
 
 public final class Organization: Model, Content {
@@ -38,14 +39,27 @@ public final class Organization: Model, Content {
     public init() {}
     
     public init(_ name: String,
-         username: String,
-         domain: String,
+         username: String?,
+         domain: String?,
          createdBy userID: User.IDValue)
     {
         self.name = name
-        self.username = username
+        if let username = username {
+            self.username = username
+        } else if let hexString = SwiftBSON.BSON.init(arrayLiteral: .maxKey).objectIDValue?.hex {
+            self.username = name + hexString
+        } else {
+            self.username = name + Int.random(in: 0...100000).description
+        }
         self.domain = domain
         self.createdBy = userID
+    }
+    
+    convenience init(from data: ObjectData) throws {
+        guard let createdBy = data.createdBy else {
+            throw Abort(.badRequest)
+        }
+        self.init(data.name, username: data.username, domain: data.domain, createdBy: createdBy)
     }
 }
 
