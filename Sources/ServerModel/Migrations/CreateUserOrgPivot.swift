@@ -7,8 +7,8 @@
 
 import Fluent
 
-struct CreateUserOrgPivot: AsyncMigration {
-    func prepare(on database: Database) async throws {
+public struct CreateUserOrgPivot: AsyncMigration {
+    public func prepare(on database: Database) async throws {
         return try await database
             .schema(UserOrganizationPivot.schema)
             .id()
@@ -18,7 +18,7 @@ struct CreateUserOrgPivot: AsyncMigration {
             .create()
     }
     
-    func revert(on database: Database) async throws {
+    public func revert(on database: Database) async throws {
         return try await database
             .schema(UserOrganizationPivot.schema)
             .delete()

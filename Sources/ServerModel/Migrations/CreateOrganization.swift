@@ -7,8 +7,8 @@
 
 import Fluent
 
-struct CreateOrganization: AsyncMigration {
-    func prepare(on database: Database) async throws {
+public struct CreateOrganization: AsyncMigration {
+    public func prepare(on database: Database) async throws {
         return try await database
             .schema(Organization.schema)
             .id()
@@ -24,7 +24,7 @@ struct CreateOrganization: AsyncMigration {
             .create()
     }
     
-    func revert(on database: Database) async throws {
+    public func revert(on database: Database) async throws {
         return try await database
             .schema(Organization.schema)
             .delete()

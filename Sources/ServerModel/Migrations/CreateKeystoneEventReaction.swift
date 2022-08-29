@@ -7,8 +7,8 @@
 
 import Fluent
 
-struct CreateKeystoneEventReaction: AsyncMigration {
-    func prepare(on database: Database) async throws {
+public struct CreateKeystoneEventReaction: AsyncMigration {
+    public func prepare(on database: Database) async throws {
         return try await database
             .schema(KeystoneEvent.Reaction.schema)
             .id()
@@ -19,7 +19,7 @@ struct CreateKeystoneEventReaction: AsyncMigration {
             .create()
     }
     
-    func revert(on database: Database) async throws {
+    public func revert(on database: Database) async throws {
         return try await database
             .schema(KeystoneEvent.Reaction.schema)
             .delete()

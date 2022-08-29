@@ -7,8 +7,8 @@
 
 import Fluent
 
-struct CreateLabel: AsyncMigration {
-    func prepare(on database: Database) async throws {
+public struct CreateLabel: AsyncMigration {
+    public func prepare(on database: Database) async throws {
         return try await database
             .schema(Label.schema)
             .id()
@@ -19,7 +19,7 @@ struct CreateLabel: AsyncMigration {
             .create()
     }
     
-    func revert(on database: Database) async throws {
+    public func revert(on database: Database) async throws {
         return try await database
             .schema(Label.schema)
             .delete()

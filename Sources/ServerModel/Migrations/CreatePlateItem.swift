@@ -8,8 +8,8 @@
 import Fluent
 import Vapor
 
-struct CreatePlateItem: AsyncMigration {
-    func prepare(on database: Database) async throws {
+public struct CreatePlateItem: AsyncMigration {
+    public func prepare(on database: Database) async throws {
         return try await database
             .schema(Plate.Item.schema)
             .id()
@@ -32,7 +32,7 @@ struct CreatePlateItem: AsyncMigration {
             .create()
     }
     
-    func revert(on database: Database) async throws {
+    public func revert(on database: Database) async throws {
         return try await database
             .schema(Plate.Item.schema)
             .delete()
