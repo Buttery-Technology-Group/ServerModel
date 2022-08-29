@@ -73,8 +73,8 @@ public final class Organization: Model, Content {
         if self.physicalAddress != data.physicalAddress {
             self.physicalAddress = data.physicalAddress
         }
-        if self.username != data.username {
-            self.username = data.username
+        if let username = data.username, self.username != username {
+            self.username = username
         }
         
         try await self.save(on: database)
