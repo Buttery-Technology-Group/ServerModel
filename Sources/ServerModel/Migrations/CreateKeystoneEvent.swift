@@ -36,4 +36,6 @@ public struct CreateKeystoneEvent: AsyncMigration {
             .schema(KeystoneEvent.schema)
             .delete()
     }
+    
+    public init() {}
 }

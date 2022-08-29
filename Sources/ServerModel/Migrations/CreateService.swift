@@ -31,4 +31,6 @@ public struct CreateService: AsyncMigration {
             .schema(Service.schema)
             .delete()
     }
+    
+    public init() {}
 }

@@ -27,4 +27,6 @@ public struct CreateSettings: AsyncMigration {
             .schema(Settings.schema)
             .delete()
     }
+    
+    public init() {}
 }

@@ -37,4 +37,6 @@ public struct CreateTableSpace: AsyncMigration {
             .schema(TableSpace.schema)
             .delete()
     }
+    
+    public init() {}
 }

@@ -29,4 +29,6 @@ public struct CreateOrganization: AsyncMigration {
             .schema(Organization.schema)
             .delete()
     }
+    
+    public init() {}
 }

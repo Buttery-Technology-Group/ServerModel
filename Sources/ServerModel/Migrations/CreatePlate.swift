@@ -38,4 +38,6 @@ public struct CreatePlate: AsyncMigration {
             .schema(Plate.schema)
             .delete()
     }
+    
+    public init() {}
 }

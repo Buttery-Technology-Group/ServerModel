@@ -23,4 +23,6 @@ public struct CreateUserTablePivot: AsyncMigration {
             .schema(UserTablePivot.schema)
             .delete()
     }
+    
+    public init() {}
 }

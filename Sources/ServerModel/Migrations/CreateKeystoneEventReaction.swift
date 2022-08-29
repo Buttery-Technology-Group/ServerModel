@@ -24,4 +24,6 @@ public struct CreateKeystoneEventReaction: AsyncMigration {
             .schema(KeystoneEvent.Reaction.schema)
             .delete()
     }
+    
+    public init() {}
 }

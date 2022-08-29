@@ -22,4 +22,6 @@ public struct CreateSoftwareLabelPivot: AsyncMigration {
             .schema(SoftwareLabelPivot.schema)
             .delete()
     }
+    
+    public init() {}
 }

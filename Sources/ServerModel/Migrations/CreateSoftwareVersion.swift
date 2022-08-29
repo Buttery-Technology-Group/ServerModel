@@ -32,4 +32,6 @@ public struct CreateSoftwareVersion: AsyncMigration {
             .schema(Software.Version.schema)
             .delete()
     }
+    
+    public init() {}
 }

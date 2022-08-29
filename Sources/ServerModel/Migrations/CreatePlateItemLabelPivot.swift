@@ -22,4 +22,6 @@ public struct CreatePlateItemLabelPivot: AsyncMigration {
             .schema(PlateItemLabelPivot.schema)
             .delete()
     }
+    
+    public init() {}
 }

@@ -28,4 +28,6 @@ public struct CreateAttachment: AsyncMigration {
             .schema(Attachment.schema)
             .delete()
     }
+    
+    public init() {}
 }

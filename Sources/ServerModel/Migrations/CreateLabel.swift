@@ -24,4 +24,6 @@ public struct CreateLabel: AsyncMigration {
             .schema(Label.schema)
             .delete()
     }
+    
+    public init() {}
 }

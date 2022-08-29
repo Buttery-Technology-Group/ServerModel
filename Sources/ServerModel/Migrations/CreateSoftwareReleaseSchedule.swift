@@ -30,4 +30,6 @@ public struct CreateSoftwareReleaseSchedule: AsyncMigration {
             .schema(Software.ReleaseSchedule.schema)
             .delete()
     }
+    
+    public init() {}
 }

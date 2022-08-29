@@ -24,4 +24,6 @@ public struct CreateUserToken: AsyncMigration {
             .schema(User.Token.schema)
             .delete()
     }
+    
+    public init() {}
 }

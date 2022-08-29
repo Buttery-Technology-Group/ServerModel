@@ -28,4 +28,6 @@ public struct CreateComponent: AsyncMigration {
             .schema(Component.schema)
             .delete()
     }
+    
+    public init() {}
 }

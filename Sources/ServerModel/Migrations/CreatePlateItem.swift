@@ -37,4 +37,6 @@ public struct CreatePlateItem: AsyncMigration {
             .schema(Plate.Item.schema)
             .delete()
     }
+    
+    public init() {}
 }

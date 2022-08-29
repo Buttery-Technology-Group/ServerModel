@@ -24,4 +24,6 @@ public struct CreateClient: AsyncMigration {
             .schema(Client.schema)
             .delete()
     }
+    
+    public init() {}
 }

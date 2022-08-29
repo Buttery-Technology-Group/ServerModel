@@ -27,4 +27,6 @@ public struct CreateEmailAddress: AsyncMigration {
             .schema(EmailAddress.schema)
             .delete()
     }
+    
+    public init() {}
 }

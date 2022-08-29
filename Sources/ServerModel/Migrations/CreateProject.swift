@@ -29,4 +29,6 @@ public struct CreateProject: AsyncMigration {
             .schema(Project.schema)
             .delete()
     }
+    
+    public init() {}
 }

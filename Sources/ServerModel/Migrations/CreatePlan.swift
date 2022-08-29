@@ -30,4 +30,6 @@ public struct CreatePlan: AsyncMigration {
             .schema(Plan.schema)
             .delete()
     }
+    
+    public init() {}
 }

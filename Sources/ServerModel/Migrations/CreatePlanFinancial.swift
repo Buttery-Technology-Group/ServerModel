@@ -32,4 +32,6 @@ public struct CreatePlanFinancial: AsyncMigration {
             .schema(Plan.Financial.schema)
             .delete()
     }
+    
+    public init() {}
 }

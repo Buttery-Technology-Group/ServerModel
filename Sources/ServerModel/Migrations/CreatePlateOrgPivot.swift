@@ -22,4 +22,6 @@ public struct CreatePlateOrgPivot: AsyncMigration {
             .schema(PlateOrgPivot.schema)
             .delete()
     }
+    
+    public init() {}
 }

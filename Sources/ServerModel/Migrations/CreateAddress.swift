@@ -27,4 +27,6 @@ public struct CreateAddress: AsyncMigration {
             .schema(Address.schema)
             .delete()
     }
+    
+    public init() {}
 }

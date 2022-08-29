@@ -27,4 +27,6 @@ public struct CreateSoftwareCustomLifeCycle: AsyncMigration {
             .schema(Software.CustomLifeCycle.schema)
             .delete()
     }
+    
+    public init() {}
 }

@@ -32,4 +32,6 @@ public struct CreateSoftware: AsyncMigration {
             .schema(Software.schema)
             .delete()
     }
+    
+    public init() {}
 }
