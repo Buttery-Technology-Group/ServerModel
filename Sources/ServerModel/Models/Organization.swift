@@ -61,6 +61,24 @@ public final class Organization: Model, Content {
         }
         self.init(data.name, username: data.username, domain: data.domain, createdBy: createdBy)
     }
+    
+    // MARK: Methods
+    public func update(from data: ObjectData, on database: Database) async throws {
+        if self.domain != data.domain {
+            self.domain = data.domain
+        }
+        if self.name != data.name {
+            self.name = data.name
+        }
+        if self.physicalAddress != data.physicalAddress {
+            self.physicalAddress = data.physicalAddress
+        }
+        if self.username != data.username {
+            self.username = data.username
+        }
+        
+        try await self.save(on: database)
+    }
 }
 
 // MARK: CreationResponse
