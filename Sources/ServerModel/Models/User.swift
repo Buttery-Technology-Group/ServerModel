@@ -133,15 +133,15 @@ extension User {
     /// When updating a user, the following are required:
     /// - Required: `id` 
     public struct ObjectData: Content {
-        let createdAt:              Date?
-        let createdBy:              User.IDValue?
-        let defaultEmail:           String?
-        let id:                     User.IDValue?
-        let name:                   String?
-        let password:               String?
-        let physicalAddress:        String?
-        let systemAccess:           SystemAccess?
-        let username:               String?
+        public let createdAt:              Date?
+        public let createdBy:              User.IDValue?
+        public let defaultEmail:           String?
+        public let id:                     User.IDValue?
+        public let name:                   String?
+        public let password:               String?
+        public let physicalAddress:        String?
+        public let systemAccess:           SystemAccess?
+        public let username:               String?
         
         public func user() throws -> User {
             return try User(data: self)
