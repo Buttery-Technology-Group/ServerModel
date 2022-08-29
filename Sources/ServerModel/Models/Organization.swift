@@ -55,7 +55,7 @@ public final class Organization: Model, Content {
         self.createdBy = userID
     }
     
-    convenience init(from data: ObjectData) throws {
+    public convenience init(from data: ObjectData) throws {
         guard let createdBy = data.createdBy else {
             throw Abort(.badRequest)
         }
